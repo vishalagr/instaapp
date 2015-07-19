@@ -1,0 +1,11 @@
+
+<% if @instagram != []%>
+	<% @instagram.each do |instagram| %>
+		
+	    <%= image_tag instagram.images.standard_resolution.url %>
+	    Number of Likes: 
+	    <%= instagram.likes[:count]%>
+	<% end %>
+<% else %>
+	<%= "No Profile found for your login "%>
+<%end%>
